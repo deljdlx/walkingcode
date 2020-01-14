@@ -1,0 +1,30 @@
+<?php
+//les boissons en happy hour sont :
+//Bière IPA (ne pas confondre avec une API en programmation)
+//Jus de fruits
+//Cocktail
+
+$debutHappyHour = 18;
+$finHappyHour = 20;
+
+$heureActuelle = 16;
+$boisson = 'Bière IPA';
+
+if($heureActuelle >= $debutHappyHour && $heureActuelle < $finHappyHour) {
+    if(
+        $boisson === 'Jus de fruits' ||
+        $Cocktail === 'Cocktail' ||
+        $boisson === 'Bière IPA'
+    ) {
+        echo $boisson." est en happy hour !";
+    }
+    else {
+        echo "La boisson n'est pas en happy hour";
+    }
+}
+else {
+    echo "Ce n'est pas l'heure de l'happy hour";
+}
+
+//============================
+

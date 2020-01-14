@@ -1,5 +1,6 @@
 class Variable {
-    constructor(name, value) {
+    constructor(name, value, type) {
+        this.type = type;
         this.name = name;
         this.value = value;
 
@@ -8,7 +9,7 @@ class Variable {
         this.element.setAttribute('id', 'variable-' + this.name);
 
         this.element.innerHTML = `
-            <label>$i = <input/></label>
+            <label>` + this.name + `</label><input/>
         `;
         this.input = this.element.querySelector('input');
 

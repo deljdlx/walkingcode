@@ -4,28 +4,60 @@ class Console
         this.element = document.getElementById('console')
     }
 
-    log(content) {
-        let div = document.createElement('div');
-        div.className = 'console-log console-entry';
-        div.innerHTML = content;
-        this.element.appendChild(div);
-        this.updateScroll();
+
+    description(content, timeout) {
+        this.write(content, 'description', timeout);
     }
 
-    comment(content) {
-        let div = document.createElement('div');
-        div.className = 'console-comment console-entry';
-        div.innerHTML = content;
-        this.element.appendChild(div);
-        this.updateScroll();
+    log(content, timeout) {
+        this.write(content, 'log', timeout);
     }
 
-    divide() {
-        let div = document.createElement('div');
-        div.className = 'console-division console-entry';
-        this.element.appendChild(div);
-        this.updateScroll();
+    question(content, timeout) {
+        this.write(content, 'question', timeout);
     }
+
+    answer(content, timeout) {
+        this.write(content, 'answer', timeout);
+    }
+
+    comment(content, timeout) {
+        this.write(content, 'comment', timeout);
+    }
+
+    warning(content, timeout) {
+        this.write(content, 'warning', timeout);
+    }
+    success(content, timeout) {
+        this.write(content, 'success', timeout);
+    }
+
+
+    out(content, timeout) {
+        this.write(content, 'out', timeout);
+    }
+
+
+    divide(timeout) {
+
+        this.write('', 'division', timeout);
+    }
+
+    write(content, css, timeout) {
+        let div = document.createElement('div');
+        div.className = 'console-'+css+' console-entry';
+        div.innerHTML = ''+content;
+        if(timeout) {
+            setTimeout(() => {
+                this.element.appendChild(div);
+                this.updateScroll();
+            }, timeout);
+        } else {
+            this.element.appendChild(div);
+            this.updateScroll();
+        }
+    }
+
 
     updateScroll(){
         this.element.scrollTop = this.element.scrollHeight;

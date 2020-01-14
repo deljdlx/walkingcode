@@ -1,0 +1,63 @@
+/*=====================================================*/
+
+
+#console {
+    flex-grow:1;
+    background-color:#000;
+    overflow: auto;
+}
+
+.console-entry {
+    color: #CCC;
+    padding: 2px 8px;
+    border-bottom: solid 1px #555;
+    font-size: 16px;
+}
+.console-comment {
+    font-style: italic;
+    color: #AAA
+}
+
+.console-division {
+    border-bottom: dashed 3px #CCC;
+}
+
+.console-question {
+    font-style: italic;
+    background-color:#555;
+    color: #FFF;
+    border-bottom: solid 1px #FFF;
+}
+
+.console-answer {
+    padding-left: 64px;
+    font-style: italic;
+    color: #FFF
+}
+
+.console-out {
+    color: #FFF;
+    font-family: "Courier New", monospace;
+}
+
+
+.console-warning {
+    font-style: italic;
+    background-color:#A00;
+    color: #FFF
+}
+
+.console-success {
+    font-style: italic;
+    background-color:#0A0;
+    color: #FFF
+}
+
+.console-description {
+    background-color:#AAA;
+    color: #FFF;
+    border: dotted 1px #FFF;
+    padding: 16px;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
