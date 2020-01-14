@@ -1,0 +1,4 @@
+WalkingCode.Viewport = function()
+{
+
+};
