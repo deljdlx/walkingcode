@@ -1,11 +1,21 @@
-<?php
+/**
+Nous sommes cinq à table pour partager un repas
+Nous souhaitons servir tout le monde
+**/
 
-$i = 0;
-while($i < 5) {
-    echo $i;
-    echo PHP_EOL;
-    $i++;
-}
+Nombre de personnes servies = 0
 
-echo $i;
-?>
+"Etape de controle" : Nous avons servi moins de 5 personnes ?
+    Oui (moins de 5 personnes ont été servies) ; alors dans ce cas :
+        servir une personne
+        Compter une personne de servie en plus
+        Revenir à l'étape de contrôle
+    Non
+        Arréter de servir
+
+
+Partager le repas (par exemple)
+
+
+
+
